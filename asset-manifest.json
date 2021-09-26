@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/neoG-markTwelve/static/css/main.e5eac222.chunk.css",
-    "main.js": "/neoG-markTwelve/static/js/main.3b8d0310.chunk.js",
-    "main.js.map": "/neoG-markTwelve/static/js/main.3b8d0310.chunk.js.map",
+    "main.js": "/neoG-markTwelve/static/js/main.114d118a.chunk.js",
+    "main.js.map": "/neoG-markTwelve/static/js/main.114d118a.chunk.js.map",
     "runtime-main.js": "/neoG-markTwelve/static/js/runtime-main.0ca20ff3.js",
     "runtime-main.js.map": "/neoG-markTwelve/static/js/runtime-main.0ca20ff3.js.map",
     "static/js/2.eac0e72c.chunk.js": "/neoG-markTwelve/static/js/2.eac0e72c.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.0ca20ff3.js",
     "static/js/2.eac0e72c.chunk.js",
     "static/css/main.e5eac222.chunk.css",
-    "static/js/main.3b8d0310.chunk.js"
+    "static/js/main.114d118a.chunk.js"
   ]
 }
