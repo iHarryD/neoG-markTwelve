@@ -2,72 +2,79 @@ import React from "react";
 import { useState } from "react";
 
 function AreaOfTriangle() {
-  const [angleOne, setAngleOne] = useState(0);
-  const [angleTwo, setAngleTwo] = useState(0);
-  const [angleThree, setAngleThree] = useState(0);
+  const [sideOne, setSideOne] = useState(0);
+  const [sideTwo, setSideTwo] = useState(0);
+  const [sideThree, setSideThree] = useState(0);
   const [result, setResult] = useState("");
 
-  function takingValue(event, setter) {
-    let value = event.target.value;
-    if (value < 0) {
-      alert("Length can't be negative.");
-    } else {
-      setter(value);
-    }
-  }
+  const errorMessage = "Please fill all the fields with valid inputs.";
 
-  function calculateArea() {
-    let anglesArray = [
-      Number(angleOne),
-      Number(angleTwo),
-      Number(angleThree),
-    ].sort();
-    console.log(anglesArray);
+  function calculateArea(event) {
+    event.preventDefault();
+    let semiPerimeter =
+      (Number(sideOne) + Number(sideTwo) + Number(sideThree)) / 2;
+    let area = Math.sqrt(
+      semiPerimeter *
+        ((semiPerimeter - sideOne) *
+          (semiPerimeter - sideTwo) *
+          (semiPerimeter - sideThree))
+    );
+    if (sideOne <= 0 || sideTwo <= 0 || sideThree <= 0 || isNaN(area)) {
+      setResult(errorMessage);
+    } else {
+      setResult(`Area of Triangle is ${area.toFixed(5)}`);
+    }
   }
 
   return (
     <>
       <div className="aot-input-div">
-        <label htmlFor="angle-1">
-          Angle 1
+        <label htmlFor="side-1">
+          Side 1
           <input
             type="number"
-            id="angle-1"
-            placeholder="0"
+            id="side-1"
+            required
             onChange={(event) => {
-              takingValue(event, setAngleOne);
+              setSideOne(event.target.value);
             }}
           />
         </label>
       </div>
       <div className="aot-input-div">
-        <label htmlFor="angle-2">
-          Angle 2
+        <label htmlFor="side-2">
+          Side 2
           <input
             type="number"
-            id="angle-2"
-            placeholder="0"
+            id="side-2"
+            required
             onChange={(event) => {
-              takingValue(event, setAngleTwo);
+              setSideTwo(event.target.value);
             }}
           />
         </label>
       </div>
       <div className="aot-input-div">
-        <label htmlFor="angle-3">
-          Angle 3
+        <label htmlFor="side-3">
+          Side 3
           <input
             type="number"
-            id="angle-3"
-            placeholder="0"
+            id="side-3"
+            required
             onChange={(event) => {
-              takingValue(event, setAngleThree);
+              setSideThree(event.target.value);
             }}
           />
         </label>
       </div>
-      <button onClick={calculateArea}>Calculate</button>
-      <div id="aot-output-div">Area of Triangle is: {result}</div>
+      <button
+        onClick={(event) => {
+          calculateArea(event);
+        }}
+      >
+        Calculate
+      </button>
+      <div id="aot-output-div">{result}</div>
     </>
   );
 }

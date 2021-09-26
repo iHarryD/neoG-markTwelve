@@ -6,18 +6,15 @@ function Hypotenuse() {
   const [height, setHeight] = useState(0);
   const [result, setResult] = useState("");
 
-  function takingValue(event, setter) {
-    let value = event.target.value;
-    if (value < 0) {
-      alert("Length can't be negative.");
-    } else {
-      setter(value);
-    }
-  }
+  const errorMessage = "Values can't be negavtive or zero.";
 
   function calculateHypotenuse() {
     let currentHypotenuse = Math.sqrt(Number(base) ** 2 + Number(height) ** 2);
-    setResult(currentHypotenuse);
+    if (base <= 0 || height <= 0) {
+      setResult(errorMessage);
+    } else {
+      setResult(`Hypotenuse' length is ${currentHypotenuse.toFixed(5)}`);
+    }
   }
 
   return (
@@ -28,9 +25,8 @@ function Hypotenuse() {
           <input
             type="number"
             id="base"
-            placeholder="0"
             onChange={(event) => {
-              takingValue(event, setBase);
+              setBase(event.target.value);
             }}
           />
         </label>
@@ -41,15 +37,14 @@ function Hypotenuse() {
           <input
             type="number"
             id="height"
-            placeholder="0"
             onChange={(event) => {
-              takingValue(event, setHeight);
+              setHeight(event.target.value);
             }}
           />
         </label>
       </div>
       <button onClick={calculateHypotenuse}>Calculate</button>
-      <div id="h-output-div">Hypotenuse' length is: {result}</div>
+      <div id="h-output-div">{result}</div>
     </>
   );
 }

@@ -1,26 +1,34 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../App.css";
 
 function Navbar() {
+  let navItems = document.querySelectorAll(".nav-items");
+
+  navItems.forEach((item) => {
+    if (item.href === window.location.href) {
+      item.classList.toggle("active");
+    }
+  });
+
   return (
     <nav>
       <h1>Fun with Triangles</h1>
       <ul id="nav-links">
-        <Link to="/">
+        <NavLink to="/" exact activeClassName="active-nav-item">
           <li className="nav-items">Quiz</li>
-        </Link>
-        <Link to="/triangleornot">
+        </NavLink>
+        <NavLink to="/triangleornot" activeClassName="active-nav-item">
           <li className="nav-items">Triangle or Not</li>
-        </Link>
+        </NavLink>
 
-        <Link to="/hypotenuse">
+        <NavLink to="/hypotenuse" activeClassName="active-nav-item">
           <li className="nav-items">Hypotenuse</li>
-        </Link>
+        </NavLink>
 
-        <Link to="/areaoftriangle">
+        <NavLink to="/areaoftriangle" activeClassName="active-nav-item">
           <li className="nav-items">Area of Triangle</li>
-        </Link>
+        </NavLink>
       </ul>
     </nav>
   );

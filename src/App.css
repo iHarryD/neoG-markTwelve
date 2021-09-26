@@ -21,6 +21,12 @@
 
 /* Basics */
 
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 a,
 button,
 li,
@@ -77,8 +83,12 @@ nav h1 {
   font-weight: 600;
 }
 
-.nav-items.active {
+.active-nav-item {
   text-decoration: underline;
+}
+
+main {
+  flex-grow: 1;
 }
 
 footer {
@@ -139,13 +149,6 @@ button:hover {
   transform: scale(1.05);
 }
 
-#score-div {
-  text-align: center;
-  margin: 2em;
-  font-weight: 600;
-  font-size: 1.5rem;
-}
-
 .ton-input-div,
 .h-input-div,
 .aot-input-div {
@@ -173,7 +176,9 @@ button:hover {
 
 #ton-output-div,
 #h-output-div,
-#aot-output-div {
+#aot-output-div,
+#score-div {
+  font-weight: 600;
   text-align: center;
   font-size: 1.5rem;
   margin: 2em 0;

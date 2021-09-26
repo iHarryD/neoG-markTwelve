@@ -3,19 +3,11 @@ import { useState } from "react";
 
 function TriangleOrNot() {
   const [result, setResult] = useState("Triangle or Not");
-
   const [angleOne, setAngleOne] = useState(0);
   const [angleTwo, setAngleTwo] = useState(0);
   const [angleThree, setAngleThree] = useState(0);
 
-  function takingValue(event, setter) {
-    let value = event.target.value;
-    if (value < 0) {
-      alert("Angles can't be negative.");
-    } else {
-      setter(value);
-    }
-  }
+  const errorMessage = "Please fill all the input fields with valid values.";
 
   function showResult() {
     let allAngles = [angleOne, angleTwo, angleThree];
@@ -25,9 +17,11 @@ function TriangleOrNot() {
     });
 
     allAngles.forEach((angle) => {
-      if (angle === 0) {
+      if (sumOfAllAngles !== 180) {
         setResult("It's not a triangle.");
-      } else if (sumOfAllAngles === 180) {
+      } else if (Number(angle) <= 0) {
+        setResult(errorMessage);
+      } else {
         setResult("It's a TRIANGLE!");
       }
     });
@@ -40,9 +34,8 @@ function TriangleOrNot() {
         <input
           type="number"
           id="angle-1"
-          placeholder="0"
           onChange={(event) => {
-            takingValue(event, setAngleOne);
+            setAngleOne(event.target.value);
           }}
         />
       </div>
@@ -51,9 +44,8 @@ function TriangleOrNot() {
         <input
           type="number"
           id="angle-2"
-          placeholder="0"
           onChange={(event) => {
-            takingValue(event, setAngleTwo);
+            setAngleTwo(event.target.value);
           }}
         />
       </div>
@@ -62,9 +54,8 @@ function TriangleOrNot() {
         <input
           type="number"
           id="angle-3"
-          placeholder="0"
           onChange={(event) => {
-            takingValue(event, setAngleThree);
+            setAngleThree(event.target.value);
           }}
         />
       </div>
