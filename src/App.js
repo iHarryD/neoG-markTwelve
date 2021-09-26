@@ -11,7 +11,7 @@ import AreaOfTriangle from "./components/AreaOfTriangle";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/neoG-markTwelve">
       <div className="App">
         <header>
           <Navbar />
