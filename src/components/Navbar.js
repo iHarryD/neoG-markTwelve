@@ -14,7 +14,27 @@ function Navbar() {
   return (
     <nav>
       <h1>Fun with Triangles</h1>
+      <span
+        className="wanna-bes"
+        id="wanna-be-hamburger"
+        onClick={() => {
+          document.querySelector("#nav-links").style.transform =
+            "translateY(0)";
+        }}
+      >
+        ▼
+      </span>
       <ul id="nav-links">
+        <span
+          className="wanna-bes"
+          id="wanna-be-close"
+          onClick={() => {
+            document.querySelector("#nav-links").style.transform =
+              "translateY(-100%)";
+          }}
+        >
+          ▲
+        </span>
         <NavLink to="/" exact activeClassName="active-nav-item">
           <li className="nav-items">Quiz</li>
         </NavLink>

@@ -91,6 +91,14 @@ button {
   letter-spacing: 2px;
 }
 
+.wanna-bes {
+  font-size: 30px;
+}
+
+#wanna-be-close {
+  text-align: end;
+}
+
 /* Styling */
 
 body {
@@ -103,6 +111,11 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.wanna-bes {
+  display: none;
+  padding-left: 1em;
 }
 
 #nav-links {
@@ -210,4 +223,29 @@ button:hover {
 .formula-div {
   margin: 3em 0 1em 0;
   padding: 2em;
+}
+
+/* Media Queries */
+
+@media (max-width: 800px) {
+  .wanna-bes {
+    display: inline;
+  }
+
+  #nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 3em 5em;
+    border-bottom-left-radius: 15px;
+    background: var(--accent-clr);
+    transition: transform 350ms;
+    transform: translateY(-100%);
+  }
+
+  .options {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
