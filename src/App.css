@@ -49,9 +49,46 @@ footer {
   color: #fff;
 }
 
+nav h1 {
+  font-size: 2rem;
+}
+
 footer {
   font-size: 0.8rem;
   text-align: center;
+}
+
+#ton-output-div,
+#h-output-div,
+#aot-output-div,
+#score-div {
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.formula-div {
+  text-align: center;
+}
+
+.ton-input-div,
+.h-input-div,
+.aot-input-div {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+button {
+  color: #fff;
+}
+
+.ton-input-div input,
+.h-input-div input,
+.aot-input-div input {
+  color: #fff;
+  font-size: 1.1rem;
+  text-align: center;
+  letter-spacing: 2px;
 }
 
 /* Styling */
@@ -66,10 +103,6 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-nav h1 {
-  font-size: 2rem;
 }
 
 #nav-links {
@@ -138,7 +171,6 @@ button {
   cursor: pointer;
   padding: 1em 1.5em;
   background: var(--accent-clr);
-  color: #fff;
   display: block;
   margin: auto;
   transition: transform 250ms;
@@ -152,9 +184,7 @@ button:hover {
 .ton-input-div,
 .h-input-div,
 .aot-input-div {
-  text-align: center;
   margin: 2em 0;
-  font-size: 1.5rem;
 }
 
 .ton-input-div input,
@@ -167,19 +197,17 @@ button:hover {
   margin-top: 1em;
   padding: 0.5em;
   background: var(--accent-clr);
-  color: #fff;
-  font-size: 1.1rem;
   border-radius: 5px;
-  text-align: center;
-  letter-spacing: 2px;
 }
 
 #ton-output-div,
 #h-output-div,
 #aot-output-div,
 #score-div {
-  font-weight: 600;
-  text-align: center;
-  font-size: 1.5rem;
   margin: 2em 0;
+}
+
+.formula-div {
+  margin: 3em 0 1em 0;
+  padding: 2em;
 }

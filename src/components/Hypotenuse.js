@@ -13,12 +13,17 @@ function Hypotenuse() {
     if (base <= 0 || height <= 0) {
       setResult(errorMessage);
     } else {
-      setResult(`Hypotenuse' length is ${currentHypotenuse.toFixed(5)}`);
+      setResult(
+        `Hypotenuse' length is ${currentHypotenuse.toFixed(5)} heron's unit.`
+      );
     }
   }
 
   return (
     <>
+      <div className="formula-div">
+        Formula: Hypotenuse = √(base² + height²)
+      </div>
       <div className="h-input-div">
         <label htmlFor="base">
           Enter base value:

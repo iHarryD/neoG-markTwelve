@@ -28,6 +28,7 @@ function AreaOfTriangle() {
 
   return (
     <>
+      <div className="formula-div">Formula: Area = √[s(s-a)(s-b)(s-c)]</div>
       <div className="aot-input-div">
         <label htmlFor="side-1">
           Side 1
