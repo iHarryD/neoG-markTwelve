@@ -7,7 +7,7 @@ function TriangleOrNot() {
   const [angleTwo, setAngleTwo] = useState(0);
   const [angleThree, setAngleThree] = useState(0);
 
-  const errorMessage = "Please fill all the input fields with valid values.";
+  const errorMessage = "Values can't be negative or zero.";
 
   function showResult() {
     let allAngles = [angleOne, angleTwo, angleThree];
@@ -16,15 +16,15 @@ function TriangleOrNot() {
       sumOfAllAngles = sumOfAllAngles + Number(angle);
     });
 
-    allAngles.forEach((angle) => {
-      if (sumOfAllAngles !== 180) {
-        setResult("It's not a triangle.");
-      } else if (Number(angle) <= 0) {
-        setResult(errorMessage);
-      } else {
+    if (angleOne <= 0 || angleTwo <= 0 || angleThree <= 0) {
+      setResult(errorMessage);
+    } else {
+      if (sumOfAllAngles === 180) {
         setResult("It's a TRIANGLE!");
+      } else {
+        setResult("It's not a triangle.");
       }
-    });
+    }
   }
 
   return (

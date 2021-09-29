@@ -116,11 +116,14 @@ nav {
 .wanna-bes {
   display: none;
   padding-left: 1em;
+  cursor: default;
+  margin: 0;
 }
 
 #nav-links {
   display: flex;
   gap: 1em;
+  margin-left: 2em;
 }
 
 .nav-items {
@@ -232,6 +235,11 @@ button:hover {
     display: inline;
   }
 
+  #wanna-be-close {
+    margin-right: -65px;
+    margin-top: -45px;
+  }
+
   #nav-links {
     flex-direction: column;
     position: absolute;
@@ -242,6 +250,10 @@ button:hover {
     background: var(--accent-clr);
     transition: transform 350ms;
     transform: translateY(-100%);
+  }
+
+  #nav-links.active {
+    transform: translateY(0);
   }
 
   .options {

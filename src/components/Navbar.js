@@ -18,8 +18,7 @@ function Navbar() {
         className="wanna-bes"
         id="wanna-be-hamburger"
         onClick={() => {
-          document.querySelector("#nav-links").style.transform =
-            "translateY(0)";
+          document.querySelector("#nav-links").classList.add("active");
         }}
       >
         ▼
@@ -29,8 +28,7 @@ function Navbar() {
           className="wanna-bes"
           id="wanna-be-close"
           onClick={() => {
-            document.querySelector("#nav-links").style.transform =
-              "translateY(-100%)";
+            document.querySelector("#nav-links").classList.remove("active");
           }}
         >
           ▲

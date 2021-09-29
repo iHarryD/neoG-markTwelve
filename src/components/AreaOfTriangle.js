@@ -7,8 +7,6 @@ function AreaOfTriangle() {
   const [sideThree, setSideThree] = useState(0);
   const [result, setResult] = useState("");
 
-  const errorMessage = "Please fill all the fields with valid inputs.";
-
   function calculateArea(event) {
     event.preventDefault();
     let semiPerimeter =
@@ -19,8 +17,10 @@ function AreaOfTriangle() {
           (semiPerimeter - sideTwo) *
           (semiPerimeter - sideThree))
     );
-    if (sideOne <= 0 || sideTwo <= 0 || sideThree <= 0 || isNaN(area)) {
-      setResult(errorMessage);
+    if (sideOne <= 0 || sideTwo <= 0 || sideThree <= 0) {
+      setResult("Values can't be negative or zero.");
+    } else if (isNaN(area)) {
+      setResult("Invalid values for a triangle.");
     } else {
       setResult(`Area of Triangle is ${area.toFixed(5)}`);
     }
