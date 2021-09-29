@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/neoG-markTwelve/static/css/main.479a974f.chunk.css",
-    "main.js": "/neoG-markTwelve/static/js/main.6a975bca.chunk.js",
-    "main.js.map": "/neoG-markTwelve/static/js/main.6a975bca.chunk.js.map",
+    "main.css": "/neoG-markTwelve/static/css/main.aa6402dd.chunk.css",
+    "main.js": "/neoG-markTwelve/static/js/main.a22f9563.chunk.js",
+    "main.js.map": "/neoG-markTwelve/static/js/main.a22f9563.chunk.js.map",
     "runtime-main.js": "/neoG-markTwelve/static/js/runtime-main.0ca20ff3.js",
     "runtime-main.js.map": "/neoG-markTwelve/static/js/runtime-main.0ca20ff3.js.map",
     "static/js/2.feff698d.chunk.js": "/neoG-markTwelve/static/js/2.feff698d.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.0cf5451b.chunk.js": "/neoG-markTwelve/static/js/3.0cf5451b.chunk.js",
     "static/js/3.0cf5451b.chunk.js.map": "/neoG-markTwelve/static/js/3.0cf5451b.chunk.js.map",
     "index.html": "/neoG-markTwelve/index.html",
-    "static/css/main.479a974f.chunk.css.map": "/neoG-markTwelve/static/css/main.479a974f.chunk.css.map",
+    "static/css/main.aa6402dd.chunk.css.map": "/neoG-markTwelve/static/css/main.aa6402dd.chunk.css.map",
     "static/js/2.feff698d.chunk.js.LICENSE.txt": "/neoG-markTwelve/static/js/2.feff698d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.0ca20ff3.js",
     "static/js/2.feff698d.chunk.js",
-    "static/css/main.479a974f.chunk.css",
-    "static/js/main.6a975bca.chunk.js"
+    "static/css/main.aa6402dd.chunk.css",
+    "static/js/main.a22f9563.chunk.js"
   ]
 }
